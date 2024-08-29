@@ -2,7 +2,6 @@
 // 1:Number 2:String 3:Boolean
 
 
-
 let num: number = 10;
 let str: string = 'Hello, TypeScript!';
 let bool: boolean = true; // true ya false
@@ -21,7 +20,6 @@ let word = "string" //type define NHY hay to Implicit
 // non-primitive
 // 1:array 2:tuples
 
-
 let arr: number[] = [1, 2, 3,];
 let strArr: string[] = ["daniyal","ali"];
 console.log(arr);
@@ -29,9 +27,35 @@ console.log(strArr);
 
 //tuple 
 // tuples are great because they allow each element in the array to be a known type of value.
+
 let tuple : [number, string, boolean] = [10, "hello", true];
 tuple.push("hello")
 console.log(tuple);
+
+// any ;
+
+let anyValue:any;
+
+anyValue = 10;
+anyValue = "hello";
+console.log(anyValue);
+
+//unknow ;
+
+let example: unknown;
+example = "hello";
+example = 123;
+
+// unknown may ksy bhy type ka variable use kar sakty hay pr jnb koe method use kray gey to usko cnfm krey gey phlay ksy ye knsa datatype hay...
+
+if (typeof example === "string") {
+    console.log(example.toUpperCase());  
+}
+
+// TypeScript mein object ek data type hai jo non-primitive values ko represent karta hai, object type kisi bhi aisi cheez ko represent kar sakta hai jismein key-value pairs hoon.
+
+let myObject: object = { name: "Ali", age: 25 };
+
 
 
 
