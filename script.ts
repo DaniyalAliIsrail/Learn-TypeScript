@@ -56,6 +56,36 @@ if (typeof example === "string") {
 
 let myObject: object = { name: "Ali", age: 25 };
 
+// enum
+//enum k help say chezo ko grp krsakty hay
+
+// Enum ek tarika hai ek set of named constants ko define karne ka.
+
+// Isse aapke code ki readability aur manageability badhti hai.
+
+// Aap enums ko numeric, string, ya mix values ke liye use kar sakte hain.
+
+// Yeh type safety aur consistency ensure karte hain, especially jab aap predefined values ke saath kaam kar rahe ho.
+
+enum direction {
+    down = "down",
+    left = "right",
+    right = "right",
+    up = "up",
+}
+
+console.log(direction.up);
+
+// enum Status {
+//     Active = 1,
+//     Inactive = 5,
+//     Pending = 10
+//   }
+  
+//   console.log(Status.Active); // Output: 1
+//   console.log(Status[5]);     // Output: 'Inactive'
+  
+
 
 
 
