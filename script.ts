@@ -56,6 +56,8 @@ if (typeof example === "string") {
 
 let myObject: object = { name: "Ali", age: 25 };
 
+// -----------------------------------------------------------------------
+
 // enum
 //enum k help say chezo ko grp krsakty hay
 
@@ -85,7 +87,50 @@ console.log(direction.up);
 //   console.log(Status.Active); // Output: 1
 //   console.log(Status[5]);     // Output: 'Inactive'
   
+// --------------------------------------------------------------------
+//* union and intersection
 
+// Union type hai jo multiple data types ko combine kar sakta hai
+
+let unionVar: number | string ;
+unionVar = "daniyal";
+
+
+if(typeof unionVar === "string"){
+    console.log(unionVar.toUpperCase());
+}
+// this part is not run beacuse unionVar is string
+
+// else if(typeof variable === 'number'){
+//     console.log(unionVar.toUpperCase());
+
+// }
+
+// ---------------------------------------------------------------------
+
+//Intersection
+
+// Intersection type hai jo multiple data types ko combine kar sakta hai, aur intersection k lie jab koi value common hai to uske liye combine kar rhe hain
+
+type Classmate = {
+    section : string
+}
+
+type Student = {
+    name : string,
+    rollNo : number
+}
+
+// intersection k lie jab koi value common hai to uske liye combine kar rhe hain
+
+
+type StudentClassmate = Student & Classmate;
+
+let a:StudentClassmate = {
+    name:"akbar",
+    section:"B",
+    rollNo:123
+}
 
 
 
