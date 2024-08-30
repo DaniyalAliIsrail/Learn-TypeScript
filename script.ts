@@ -87,8 +87,8 @@ console.log(direction.up);
 //   console.log(Status.Active); // Output: 1
 //   console.log(Status[5]);     // Output: 'Inactive'
   
-// --------------------------------------------------------------------
 //* union and intersection
+// ---------------------------union-----------------------------------------
 
 // Union type hai jo multiple data types ko combine kar sakta hai
 
@@ -106,9 +106,8 @@ if(typeof unionVar === "string"){
 
 // }
 
-// ---------------------------------------------------------------------
+// ----------------- Intersection----------------------------------------------------
 
-//Intersection
 
 // Intersection type hai jo multiple data types ko combine kar sakta hai, aur intersection k lie jab koi value common hai to uske liye combine kar rhe hain
 
@@ -122,8 +121,6 @@ type Student = {
 }
 
 // intersection k lie jab koi value common hai to uske liye combine kar rhe hain
-
-
 type StudentClassmate = Student & Classmate;
 
 let a:StudentClassmate = {
@@ -131,6 +128,46 @@ let a:StudentClassmate = {
     section:"B",
     rollNo:123
 }
+
+//type aliases
+// type alises apna data type banany kay lye use krta hay.
+
+// company apndata type define keya huwa hay jo object hay...
+
+type User = {
+    name: string,
+    email: string,
+    userId : number
+}
+
+// compnay nay bola user k varibale banado unhonay nay variabe k structure ya us varible ko kesy banana hay wo define keya huwa hay...
+
+
+let user: User = {
+    name:"daniyal",
+    email:"daniyal@gmail.com",
+    userId:123
+}
+
+type dabba ={
+    weight : string;
+    color : string
+}
+
+let dabbaObject: dabba = {
+    weight:"50 kg",
+    color:"black"
+}
+
+// --------------- interfaces-------------------------------
+
+// TypeScript mein interface ek structure hai jo kisi object ki properties aur unke types ko define karta hai. Ye code ko readable aur error-free banane mein madad karta hai, kyun ke ye specific types aur structure enforce karta hai kay ap interface follow kro .
+
+// syntax
+// interface User{
+//     name: string,
+//     age: number,
+// }
 
 
 
