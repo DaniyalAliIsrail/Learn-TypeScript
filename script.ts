@@ -161,13 +161,46 @@ let dabbaObject: dabba = {
 
 // --------------- interfaces-------------------------------
 
-// TypeScript mein interface ek structure hai jo kisi object ki properties aur unke types ko define karta hai. Ye code ko readable aur error-free banane mein madad karta hai, kyun ke ye specific types aur structure enforce karta hai kay ap interface follow kro .
+// TypeScript mein interface ek structure hai jo kisi object ki properties aur unke types ko define karta hai.
 
-// syntax
-// interface User{
-//     name: string,
-//     age: number,
-// }
+
+  interface food {
+    name: string,
+    price: number,
+    calories: number,
+  }
+
+  interface mango extends food{
+    mangosweetLevel: number,
+    color: string,
+    verySweet : boolean
+  }
+
+  interface stawbeery extends food{
+    stawberrySweetLevel: number,
+    color: string,
+    verySour : boolean
+  }
+
+//   class
+
+class Airpord {
+    price = 2500;
+    image = "image/airpord";
+    color = "white";
+    
+    //method;
+    playMusic(){
+        console.log("Playing Music");
+    }
+
+    switchMode(mode:string){
+        console.log("Switched Mode");
+    }
+
+}
+
+
 
 
 
