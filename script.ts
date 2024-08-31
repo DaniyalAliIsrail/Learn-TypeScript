@@ -182,25 +182,56 @@ let dabbaObject: dabba = {
     verySour : boolean
   }
 
-//   class
+// class
 
-class Airpord {
-    price = 2500;
-    image = "image/airpord";
-    color = "white";
+// class Airpord {
+//     price = 2500;
+//     image = "image/airpord";
+//     color = "white";
     
-    //method;
-    playMusic(){
-        console.log("Playing Music");
+//     //method;
+//     playMusic(){
+//         console.log("Playing Music");
+//     }
+
+//     switchMode(mode:string){
+//         console.log("Switched Mode");
+//     }
+
+// }
+
+class AirConditioner {
+    
+    color = "white";
+    tone = 1 ;
+    company = "tcl";
+    temperature = 22;
+    
+    turnOn(name:string){
+        console.log(`turn on ${name}`);
     }
 
-    switchMode(mode:string){
-        console.log("Switched Mode");
+    turnOf(name: string){
+        console.log(`turn off ${name}`);
+    }
+
+    raiseTemp(){
+        this.temperature++;
+        console.log(this.temperature);
+    }
+
+    lowerTemp(){
+        this.temperature--;
+        console.log(this.temperature);
     }
 
 }
 
+let ac1 = new AirConditioner ;
+let ac2 = new AirConditioner ;
 
+ac1.turnOn("ac1");
+ac2.turnOn("ac2");
 
 
 
